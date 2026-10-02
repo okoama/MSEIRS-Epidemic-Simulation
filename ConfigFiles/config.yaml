@@ -1,0 +1,23 @@
+population:
+  N: 1000
+
+initial:
+  M0: 0 # maternal immune infants 
+  S0: null # N - M0 - E0 - I0 - R0
+  E0: 0 # exposed in non-infectious latent period
+  I0: 10 # infectious individuals
+  R0: 0 # recovered with temporary immunity -> suceptible
+
+parameters:
+  lam : 0.04 # recruitment rate (m births)
+  delta : 0.0056 # maternal immunity rate
+  beta : 0.5 # transmission coefficient (contact rate)
+  sigma : 0.5 # contact number (incubation rate)
+  gamma : 0.2 # recovery rate (1/gamma - avg infectious period)
+  omega : 0.0027 # immunity rate (R -> S)
+  mu : 0.0000391 # natural per capita mortality rate
+
+simulation:
+  t_start: 0
+  t_end: 100
+  t_points: 100
